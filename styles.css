@@ -1,0 +1,60 @@
+body {
+
+	background-image: url("http://wallpapercave.com/wp/oJ4TXh3.jpg");
+
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	position: relative;
+}
+
+.vertical {
+
+	float: down;
+
+}
+
+.vertical a {
+
+	display: block;
+	color: white; 
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+.horizontal{
+
+    float: left;
+	
+}
+
+.horizontal a {
+
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+	
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.horizontal img{
+	
+	position: absolute;
+	max-height: 40px;
+	right: 0;
+	margin: 0;
+	padding: 3px;
+
+}
