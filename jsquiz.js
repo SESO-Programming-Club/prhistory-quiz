@@ -45,9 +45,10 @@
     }
     if (selections[questionCounter] != questions[questionCounter].correctAnswer){
       
-      alert('Incorrecto. Inténtalo de nuevo.')
+      alert('Incorrecto. ¡Inténtalo de nuevo!')
       badAnswers++;
-      //block question and try again
+      //var x = $('selections[questionCounter]');
+      //x.disabled = true;
       
     }
     else {
