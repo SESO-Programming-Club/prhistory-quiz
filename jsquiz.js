@@ -175,9 +175,9 @@
     
     total = total - badAnswers;
     
-    score.append('Tuvistes ' + total + ' puntos de ' +
+    score.append('¡Tuvistes ' + total + ' puntos de ' +
                  questions.length + '!');
-    score.append('<p>' + 'Cada contestacion incorrecta es -1!' + '</p>');
+    score.append('<p>' + '¡Cada contestacion incorrecta es -1!' + '</p>');
     
     total = 0;
     badAnswers = 0;
