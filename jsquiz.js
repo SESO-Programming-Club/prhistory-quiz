@@ -4,12 +4,12 @@
     choices: ["Contador Geiger", "Termómetro", "Barómetro", "Contador Gilberto"],
     correctAnswer: 1
   }, {
-    question: "What is 3*6?",
-    choices: [3, 6, 9, 12, 18],
+    question: "¿Cual es el nombre para el medico de los tainos?",
+    choices: ["Cacique", "Cajaya", "Bohiti", "Bohio", "Bojike"],
     correctAnswer: 4
   }, {
-    question: "What is 8*9?",
-    choices: [72, 99, 108, 134, 156],
+    question: "¿Cual huracan tuvo mas muertes?",
+    choices: ["George", "kill me", "matame", "fuck", "HELP"],
     correctAnswer: 0
   }, {
     question: "What is 1*7?",
@@ -22,6 +22,7 @@
   }];
   
   var questionCounter = 0; //Tracks question number
+  var badAnswers = 0;
   var selections = []; //Array containing user choices
   var quiz = $('#quiz'); //Quiz div object
   
@@ -41,7 +42,15 @@
     // If no user selection, progress is stopped
     if (isNaN(selections[questionCounter])) {
       alert('Please make a selection!');
-    } else {
+    }
+    if (selections[questionCounter] != questions[questionCounter].correctAnswer){
+      
+      alert('Incorrecto. Inténtalo de nuevo.')
+      badAnswers++;
+      //block question and try again
+      
+    }
+    else {
       questionCounter++;
       displayNext();
     }
@@ -101,9 +110,11 @@
   
   // Creates a list of the answer choices as radio inputs
   function createRadios(index) {
+    
     var radioList = $('<ul>');
     var item;
     var input = '';
+    
     for (var i = 0; i < questions[index].choices.length; i++) {
       item = $('<li>');
       input = '<input type="radio" name="answer" value=' + i + ' />';
@@ -117,6 +128,17 @@
   // Reads the user selection and pushes the value to an array
   function choose() {
     selections[questionCounter] = +$('input[name="answer"]:checked').val();
+    
+    if(selections[questionCounter] === questions[questionCounter].correctAnswer){
+      
+      //Say correct answer!
+      
+    }
+    else {
+      
+      //Point to the correct answer!
+      
+    }
   }
   
   // Displays next requested element
@@ -131,19 +153,13 @@
           $('input[value='+selections[questionCounter]+']').prop('checked', true);
         }
         
-        // Controls display of 'prev' button
-        if(questionCounter === 1){
-          $('#prev').show();
-        } else if(questionCounter === 0){
-          
-          $('#prev').hide();
+        if(questionCounter === 0){
           $('#next').show();
         }
       }else {
         var scoreElem = displayScore();
         quiz.append(scoreElem).fadeIn();
         $('#next').hide();
-        $('#prev').hide();
         $('#start').show();
       }
     });
