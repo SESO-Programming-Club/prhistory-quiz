@@ -170,14 +170,11 @@
   function displayScore() {
     var score = $('<p>',{id: 'question'});
     
-    var numCorrect = 0;
-    for (var i = 0; i < selections.length; i++) {
-      if (selections[i] === questions[i].correctAnswer) {
-        numCorrect++;
-      }
-    }
+    var total = questionCounter;
     
-    score.append('Tuvistes ' + numCorrect + ' preguntas correctas de ' +
+    total = total - badAnswers;
+    
+    score.append('Tuvistes ' + total + ' puntos de ' +
                  questions.length + '!');
     return score;
   }
