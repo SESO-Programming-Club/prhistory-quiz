@@ -178,6 +178,11 @@
     score.append('Tuvistes ' + total + ' puntos de ' +
                  questions.length + '!');
     score.append('<p>' + 'Cada contestacion incorrecta es -1!' + '</p>');
+    
+    total = 0;
+    badAnswers = 0;
+    
     return score;
+    
   }
 })();
