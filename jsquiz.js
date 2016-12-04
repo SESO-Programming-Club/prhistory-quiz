@@ -47,8 +47,7 @@
       
       alert('Incorrecto. ¡Inténtalo de nuevo!')
       badAnswers++;
-      //var x = $('selections[questionCounter]');
-      //x.disabled = true;
+      $('input[name="answer"]:checked').attr('disabled', true);
       
     }
     else {
@@ -176,6 +175,7 @@
     
     score.append('Tuvistes ' + total + ' puntos de ' +
                  questions.length + '!');
+    score.append('<p>' + 'Cada contestacion incorrecta es -1!' + '</p>');
     return score;
   }
 })();
