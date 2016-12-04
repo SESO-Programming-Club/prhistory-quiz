@@ -12,13 +12,13 @@
     choices: ["George", "kill me", "matame", "fuck", "HELP"],
     correctAnswer: 0
   }, {
-    question: "What is 1*7?",
-    choices: [4, 5, 6, 7, 8],
+    question: "Nothing here yet",
+    choices: ["Nothing"],
     correctAnswer: 3
   }, {
-    question: "What is 8*8?",
-    choices: [20, 30, 40, 50, 64],
-    correctAnswer: 4
+    question: "Nothing here yet",
+    choices: ["Nothing"],
+    correctAnswer: 0
   }];
   
   var questionCounter = 0; //Tracks question number
