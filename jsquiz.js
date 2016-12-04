@@ -8,9 +8,9 @@
     choices: ["Cacique", "Cajaya", "Bohiti", "Bohio", "Bojike"],
     correctAnswer: 4
   }, {
-    question: "¿Cual huracan tuvo mas muertes?",
-    choices: ["George", "kill me", "matame", "fuck", "HELP"],
-    correctAnswer: 0
+    question: "¿Cual huracán tuvo mas muertes?",
+    choices: ["George", "San Felipe II", "San Ciprián", "Santa Clara", "Hugo"],
+    correctAnswer: 1
   }, {
     question: "Nothing here yet",
     choices: ["Nothing"],
