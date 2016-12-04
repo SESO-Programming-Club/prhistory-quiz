@@ -14,7 +14,7 @@
   }, {
     question: "Nothing here yet",
     choices: ["Nothing"],
-    correctAnswer: 3
+    correctAnswer: 0
   }, {
     question: "Nothing here yet",
     choices: ["Nothing"],
@@ -45,11 +45,13 @@
     }
     if (selections[questionCounter] != questions[questionCounter].correctAnswer){
       
-      alert('Incorrecto. ¡Inténtalo de nuevo!')
+      //alert('Incorrecto. ¡Inténtalo de nuevo!')
       badAnswers++;
       $('input[name="answer"]:checked').attr('disabled', true);
+      $('#container').effect("shake");
       
-    }
+     }
+    
     else {
       questionCounter++;
       displayNext();
