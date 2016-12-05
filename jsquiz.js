@@ -12,13 +12,38 @@
     choices: ["George", "San Felipe II", "San Ciprián", "Santa Clara", "Hugo"],
     correctAnswer: 1
   }, {
-    question: "Nothing here yet",
-    choices: ["Nothing"],
-    correctAnswer: 0
+    question: "¿En que año llego el Huracán Hugo?",
+    choices: ["1998", "1989", "1987", "1996", "1988"],
+    correctAnswer: 1
   }, {
-    question: "Nothing here yet",
-    choices: ["Nothing"],
-    correctAnswer: 0
+    question: "¿En que año llego el Huracán George?",
+    choices: ["1996", "1931", "1988", "1997", "1998"],
+    correctAnswer: 4
+  }
+  , {
+    question: "¿Hawaii?",
+    choices: ["1932", "1931", "1928", "1930", "1920"],
+    correctAnswer: 2
+  }
+  , {
+    question: "¿Migration?",
+    choices: ["1932", "1931", "1928", "1930", "1920"],
+    correctAnswer: 2
+  }
+  , {
+    question: "¿Tainos?",
+    choices: ["1932", "1931", "1928", "1930", "1920"],
+    correctAnswer: 2
+  }
+  , {
+    question: "¿Emigracion?",
+    choices: ["1932", "1931", "1928", "1930", "1920"],
+    correctAnswer: 2
+  }
+  , {
+    question: "¿I dont know ill figure it out?",
+    choices: ["1932", "1931", "1928", "1930", "1920"],
+    correctAnswer: 2
   }];
   
   var times = 0;
@@ -112,7 +137,7 @@
       id: 'question'
     });
     
-    var header = $('<h2>Pregunta ' + (index + 1) + ':</h2>');
+    var header = $('<h2>Pregunta ' + (times + 1) + ':</h2>');
     qElement.append(header);
     
     var question = $('<p>').append(questions[index].question);
