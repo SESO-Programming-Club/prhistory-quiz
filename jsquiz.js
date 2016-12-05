@@ -43,7 +43,7 @@
     if (isNaN(selections[questionCounter])) {
       alert('Please make a selection!');
     }
-    if (selections[questionCounter] != questions[questionCounter].correctAnswer){
+    if (selections[questionCounter] !== questions[questionCounter].correctAnswer){
       
       //alert('Incorrecto. ¡Inténtalo de nuevo!')
       badAnswers++;
