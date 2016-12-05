@@ -162,7 +162,7 @@
     while(true){
       
       random = getRandomInt(0, questions.length - 1);
-      if(!(isInArray(random, questionsDone[random]))){
+      if(!(isInArray(random, questionsDone))){
         
         questionsDone[random] = random;
         break;
