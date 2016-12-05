@@ -21,6 +21,9 @@
     correctAnswer: 0
   }];
   
+  var times = 0;
+  var random;
+  var questionsDone = [];
   var questionCounter = 0; //Tracks question number
   var badAnswers = 0;
   var selections = []; //Array containing user choices
@@ -34,16 +37,16 @@
     e.preventDefault();
     
     // Suspend click listener during fade animation
-    if(quiz.is(':animated')) {        
+      if(quiz.is(':animated')) {        
       return false;
     }
     choose();
     
     // If no user selection, progress is stopped
-    if (isNaN(selections[questionCounter])) {
+    if (isNaN(selections[random])) { //fix this error
       $('#container').effect("shake");
     }
-    else if (selections[questionCounter] !== questions[questionCounter].correctAnswer){
+    else if (selections[random] !== questions[random].correctAnswer){
       
       //alert('Incorrecto. ¡Inténtalo de nuevo!')
       badAnswers++;
@@ -53,13 +56,14 @@
      }
     
     else {
+      times++;
       questionCounter++;
       displayNext();
     }
   });
   
   // Click handler for the 'prev' button
-  $('#prev').on('click', function (e) {
+  /*$('#prev').on('click', function (e) {
     e.preventDefault();
     
     if(quiz.is(':animated')) {
@@ -68,7 +72,7 @@
     choose();
     questionCounter--;
     displayNext();
-  });
+  });*/
   
   // Click handler for the 'Start Over' button
   $('#start').on('click', function (e) {
@@ -80,6 +84,10 @@
     questionCounter = 0;
     selections = [];
     displayNext();
+    total = 0;
+    badAnswers = 0;
+    questionsDone = [];
+    times = 0;
     $('#start').hide();
   });
   
@@ -129,35 +137,57 @@
   
   // Reads the user selection and pushes the value to an array
   function choose() {
-    selections[questionCounter] = +$('input[name="answer"]:checked').val();
-    
-    if(selections[questionCounter] === questions[questionCounter].correctAnswer){
-      
-      //Say correct answer!
-      
-    }
-    else {
-      
-      //Point to the correct answer!
-      
-    }
+    selections[random] = +$('input[name="answer"]:checked').val();
   }
+  
+  //javascript is a special one
+  function isInArray(value, array) {
+    
+    return array.indexOf(value) > -1;
+    
+  }
+  
+  //very special
+  function getRandomInt(min, max) {
+    
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+    
+  }
+  
   
   // Displays next requested element
   function displayNext() {
+    
+    //Very lazy fix but hey it works
+    while(true){
+      
+      random = getRandomInt(0, questions.length - 1);
+      if(!(isInArray(random, questionsDone))){
+        
+        questionsDone[random] = random;
+        break;
+        
+      }
+      if(times = questions.length - 1)break;
+    }
+        
     quiz.fadeOut(function() {
+      
       $('#question').remove();
       
       if(questionCounter < questions.length){
-        var nextQuestion = createQuestionElement(questionCounter);
+        
+        var nextQuestion = createQuestionElement(random);
         quiz.append(nextQuestion).fadeIn();
-        if (!(isNaN(selections[questionCounter]))) {
-          $('input[value='+selections[questionCounter]+']').prop('checked', true);
+        
+        if (!(isNaN(selections[random]))) {
+          $('input[value='+selections[random]+']').prop('checked', true);
         }
         
         if(questionCounter === 0){
           $('#next').show();
         }
+        
       }else {
         var scoreElem = displayScore();
         quiz.append(scoreElem).fadeIn();
@@ -178,9 +208,6 @@
     score.append('¡Tuvistes ' + total + ' puntos de ' +
                  questions.length + '!');
     score.append('<p>' + '¡Cada contestacion incorrecta es -1!' + '</p>');
-    
-    total = 0;
-    badAnswers = 0;
     
     return score;
     
