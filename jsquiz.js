@@ -22,14 +22,16 @@
   }];
   
   var times = 0;
-  var random;
+  var total;
+  var random = getRandomInt(0, questions.length - 1);
   var questionsDone = [];
   var questionCounter = 0; //Tracks question number
   var badAnswers = 0;
   var selections = []; //Array containing user choices
   var quiz = $('#quiz'); //Quiz div object
   
-  fillArray();
+  findNext();
+  //fillArray();
   
   // Display initial question
   displayNext();
@@ -60,6 +62,7 @@
     else {
       times++;
       questionCounter++;
+      if(times != questions.length)findNext();
       displayNext();
     }
   });
@@ -85,11 +88,12 @@
     }
     questionCounter = 0;
     selections = [];
+    questionsDone = [];
     displayNext();
     total = 0;
     badAnswers = 0;
-    fillArray();
     times = 0;
+    findNext();
     $('#start').hide();
   });
   
@@ -120,7 +124,7 @@
     return qElement;
   }
   
-  function fillArray(){
+  /*function fillArray(){
     
     for(var k = 0; k < questions.length; k++){
       
@@ -128,7 +132,7 @@
       
     }
     
-  }
+  }*/
   
   // Creates a list of the answer choices as radio inputs
   function createRadios(index) {
@@ -152,36 +156,35 @@
     selections[random] = +$('input[name="answer"]:checked').val();
   }
   
-  //javascript is a special one
-
-  
-  //very special
   function getRandomInt(min, max) {
     
     return Math.floor(Math.random() * (max - min + 1)) + min;
     
   }
   
+  function findNext() {
+    
+     while(true){
+      
+      var check = questionsDone[random];
+      
+      if(!(check == 1)){
+        
+        questionsDone[random] = 1;
+        return random = random;
+        
+      }
+      else {
+        
+        random = getRandomInt(0, questions.length - 1); 
+        
+      }
+    }
+  }
   
   // Displays next requested element
   function displayNext() {
     
-    //Very lazy fix but hey it works
-    while(true){
-      
-      random = getRandomInt(0, questions.length - 1);
-      if(questionsDone[random] != 1){
-        
-        questionsDone[random] = 1;
-        console.log(questionsDone[random]);
-        break;
-        
-      }
-      
-      if(times = questions.length - 1)break;
-      
-    }
-        
     quiz.fadeOut(function() {
       
       $('#question').remove();
@@ -212,7 +215,7 @@
   function displayScore() {
     var score = $('<p>',{id: 'question'});
     
-    var total = questionCounter;
+    total = questionCounter;
     
     total = total - badAnswers;
     
