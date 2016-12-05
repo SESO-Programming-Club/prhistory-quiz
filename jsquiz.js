@@ -29,6 +29,8 @@
   var selections = []; //Array containing user choices
   var quiz = $('#quiz'); //Quiz div object
   
+  fillArray();
+  
   // Display initial question
   displayNext();
   
@@ -86,7 +88,7 @@
     displayNext();
     total = 0;
     badAnswers = 0;
-    questionsDone = [];
+    fillArray();
     times = 0;
     $('#start').hide();
   });
@@ -118,6 +120,16 @@
     return qElement;
   }
   
+  function fillArray(){
+    
+    for(var k = 0; k < questions.length; k++){
+      
+        questionsDone[k] = 0;
+      
+    }
+    
+  }
+  
   // Creates a list of the answer choices as radio inputs
   function createRadios(index) {
     
@@ -141,11 +153,7 @@
   }
   
   //javascript is a special one
-  function isInArray(value, array) {
-    
-    return array.indexOf(value) > -1;
-    
-  }
+
   
   //very special
   function getRandomInt(min, max) {
@@ -162,9 +170,10 @@
     while(true){
       
       random = getRandomInt(0, questions.length - 1);
-      if(!(isInArray(random, questionsDone))){
+      if(questionsDone[random] != 1){
         
-        questionsDone[random] = random;
+        questionsDone[random] = 1;
+        console.log(questionsDone[random]);
         break;
         
       }
