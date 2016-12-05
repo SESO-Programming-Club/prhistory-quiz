@@ -162,13 +162,15 @@
     while(true){
       
       random = getRandomInt(0, questions.length - 1);
-      if(!(isInArray(random, questionsDone))){
+      if(!(isInArray(random, questionsDone[random]))){
         
         questionsDone[random] = random;
         break;
         
       }
+      
       if(times = questions.length - 1)break;
+      
     }
         
     quiz.fadeOut(function() {
