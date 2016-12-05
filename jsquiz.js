@@ -41,9 +41,9 @@
     
     // If no user selection, progress is stopped
     if (isNaN(selections[questionCounter])) {
-      alert('Please make a selection!');
+      $('#container').effect("shake");
     }
-    if (selections[questionCounter] !== questions[questionCounter].correctAnswer){
+    else if (selections[questionCounter] !== questions[questionCounter].correctAnswer){
       
       //alert('Incorrecto. ¡Inténtalo de nuevo!')
       badAnswers++;
