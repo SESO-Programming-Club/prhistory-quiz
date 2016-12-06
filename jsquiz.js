@@ -5,20 +5,32 @@
     correctAnswer: 1
   }, {
     question: "¿Cual es el nombre para el medico de los tainos?",
-    choices: ["Cacique", "Cajaya", "Bohiti", "Bohio", "Bojike"],
-    correctAnswer: 4
+    choices: ["Cacique", "Cajaya", "Bojike", "Bohio", "Bohiti"],
+    correctAnswer: 2
   }, {
     question: "¿Cual huracán tuvo mas muertes?",
     choices: ["George", "San Felipe II", "San Ciprián", "Santa Clara", "Hugo"],
     correctAnswer: 1
   }, {
     question: "¿En que año llego el Huracán Hugo?",
-    choices: ["1998", "1989", "1987", "1996", "1988"],
-    correctAnswer: 1
+    choices: ["1998", "1988", "1989", "1996", "1987"],
+    correctAnswer: 2
   }, {
     question: "¿En que año llego el Huracán George?",
     choices: ["1996", "1931", "1988", "1997", "1998"],
     correctAnswer: 4
+  }, {
+    question: "¿Cuanto habitantes, segun O'Reilly, habian en San German durante el 1765?",
+    choices: ["Menos de 1,000", "1,000 - 2,000", "2,000 - 3,000", "4,000 - 5,000", "Mas de 5,000"],
+    correctAnswer: 4
+  }, {
+    question: "¿Qué porcentaje de la población en el 1765 eran esclavos africanos?",
+    choices: ["12.4%", "13.4%", "12.1%", "12.6%", "12%"],
+    correctAnswer: 3
+  }, {
+    question: "¿De la población hispana en Estados Unidos, que porcentaje son los puertoriqueños?",
+    choices: ["9%", "14.5%", "10.4%", "66.1%", "66.2%"],
+    correctAnswer: 0
   }];
   
   var times = 0;
