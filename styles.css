@@ -2,7 +2,9 @@ body {
 
 	font-family: Sans-serif;
 	background-image: url("http://wallpapercave.com/wp/oJ4TXh3.jpg");
-
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    
 }
 
 h1 {
