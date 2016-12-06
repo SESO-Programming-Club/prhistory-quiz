@@ -19,31 +19,6 @@
     question: "¿En que año llego el Huracán George?",
     choices: ["1996", "1931", "1988", "1997", "1998"],
     correctAnswer: 4
-  }
-  , {
-    question: "¿Hawaii?",
-    choices: ["1932", "1931", "1928", "1930", "1920"],
-    correctAnswer: 2
-  }
-  , {
-    question: "¿Migration?",
-    choices: ["1932", "1931", "1928", "1930", "1920"],
-    correctAnswer: 2
-  }
-  , {
-    question: "¿Tainos?",
-    choices: ["1932", "1931", "1928", "1930", "1920"],
-    correctAnswer: 2
-  }
-  , {
-    question: "¿Emigracion?",
-    choices: ["1932", "1931", "1928", "1930", "1920"],
-    correctAnswer: 2
-  }
-  , {
-    question: "¿I dont know ill figure it out?",
-    choices: ["1932", "1931", "1928", "1930", "1920"],
-    correctAnswer: 2
   }];
   
   var times = 0;
