@@ -42,21 +42,30 @@
   }, {
     question: "¿Cual es el significado de la palabra taína 'Dajao'?",
     choices: ["Marisco", "Salmon", "Pez Escuridiso", "Cangrejo", "Cangrejo Escuridiso"],
-    correctAnswer: 1
+    correctAnswer: 2
   }, {
     question: "¿Cual es el significado de la palabra taína 'Areito'?",
     choices: ["Cangrejo Escuridiso", "Ritual para curar enfermedades", "Otra fiesta taína", "Sortija hecha de flores", "Baile de Los Taínos"],
-    correctAnswer: 3
+    correctAnswer: 4
   }, {
     question: "¿Quien de la tribu taína vivia en un 'Caney' y se sentaba en un 'Dujo'?",
     choices: ["Bojike", "Cacique", "Bohike", "Taínos Masculinos", "Taínos Enfermos"],
     correctAnswer: 1
+  }, {
+    question: "¿Cual es el significado de la palabra taína 'Jaiba'?",
+    choices: ["Cangrejo Escuridiso", "Medico Taíno", "Pez del Mar", "Cangrejo del Mar", "Cangrejo Femenino"],
+    correctAnswer: 3
+  }, {
+    question: "¿Cual de las siguientes palabras taínas significa 'Guerra Taía'?",
+    choices: ["Guasabara", "Batey", "Arito", "Dujo", "Batu"],
+    correctAnswer: 0
   }];
+  //Guasabara
   
   //keep track of questions written so far
   console.log(questions.length); 
   
-  var times = 0;
+  var times = 0; //later on change this since its redundant to use it
   var total;
   var random = getRandomInt(0, questions.length - 1);
   var questionsDone = [];
@@ -66,7 +75,6 @@
   var quiz = $('#quiz'); //Quiz div object
   
   findNext();
-  //fillArray();
   
   // Display initial question
   displayNext();
