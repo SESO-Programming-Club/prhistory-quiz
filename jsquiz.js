@@ -56,7 +56,7 @@
     choices: ["Cangrejo Escuridiso", "Medico Taíno", "Pez del Mar", "Cangrejo del Mar", "Cangrejo Femenino"],
     correctAnswer: 3
   }, {
-    question: "¿Cual de las siguientes palabras taínas significa 'Guerra Taía'?",
+    question: "¿Cual de las siguientes palabras taínas significa 'Guerra Taína'?",
     choices: ["Guasabara", "Batey", "Arito", "Dujo", "Batu"],
     correctAnswer: 0
   }];
@@ -64,7 +64,7 @@
   
   if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
-    alert("Attention!! Use your device in landscape mode for better viewing!");
+    alert("Use your device in landscape mode for better viewing!");
  
   }
   
