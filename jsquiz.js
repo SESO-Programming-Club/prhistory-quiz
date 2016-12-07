@@ -4,7 +4,7 @@
     choices: ["Contador Geiger", "Termómetro", "Barómetro", "Contador Gilberto"],
     correctAnswer: 1
   }, {
-    question: "¿Cual es el nombre para el medico de los tainos?",
+    question: "¿Cual es el nombre para el medico de los taínos?",
     choices: ["Cacique", "Cajaya", "Bojike", "Bohio", "Bohiti"],
     correctAnswer: 2
   }, {
@@ -31,7 +31,30 @@
     question: "¿De la población hispana en Estados Unidos, que porcentaje son los puertoriqueños?",
     choices: ["9%", "14.5%", "10.4%", "66.1%", "66.2%"],
     correctAnswer: 0
+  }, {
+    question: "¿Cual es el significado de la palabra taína 'Yucahu'?",
+    choices: ["Dios de la Yuca", "Yuca", "Diosa de la Yucah", "Campo de Yuca", "Ensalada de Yuca"],
+    correctAnswer: 0
+  }, {
+    question: "¿Cual es el significado de la palabra taína 'Kayaka'?",
+    choices: ["Dios del Huracán", "Bote Taino", "Jefe de la Tribu", "Medico", "Bola para el batu"],
+    correctAnswer: 1
+  }, {
+    question: "¿Cual es el significado de la palabra taína 'Dajao'?",
+    choices: ["Marisco", "Salmon", "Pez Escuridiso", "Cangrejo", "Cangrejo Escuridiso"],
+    correctAnswer: 1
+  }, {
+    question: "¿Cual es el significado de la palabra taína 'Areito'?",
+    choices: ["Cangrejo Escuridiso", "Ritual para curar enfermedades", "Otra fiesta taína", "Sortija hecha de flores", "Baile de Los Taínos"],
+    correctAnswer: 3
+  }, {
+    question: "¿Quien de la tribu taína vivia en un 'Caney' y se sentaba en un 'Dujo'?",
+    choices: ["Bojike", "Cacique", "Bohike", "Taínos Masculinos", "Taínos Enfermos"],
+    correctAnswer: 1
   }];
+  
+  //keep track of questions written so far
+  console.log(questions.length); 
   
   var times = 0;
   var total;
