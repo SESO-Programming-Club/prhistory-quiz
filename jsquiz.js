@@ -62,6 +62,12 @@
   }];
   //Guasabara
   
+  if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+
+    alert("Attention!! Use your device in landscape mode for better viewing!");
+ 
+  }
+  
   //keep track of questions written so far
   console.log(questions.length); 
   
