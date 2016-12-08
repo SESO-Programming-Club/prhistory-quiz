@@ -69,7 +69,8 @@
   }
   
   //keep track of questions written so far
-  console.log(questions.length); 
+  console.log(questions.length);
+  console.log("Hello, stranger :D");
   
   var times = 0; //later on change this since its redundant to use it
   var total;
