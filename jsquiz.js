@@ -6,7 +6,7 @@
   }, {
     question: "¿Cual es el nombre para el medico de los taínos?",
     choices: ["Cacique", "Cajaya", "Bohike", "Bohio", "Boti"],
-    correctAnswer: 3
+    correctAnswer: 2
   }, {
     question: "¿Cual huracán tuvo mas muertes?",
     choices: ["George", "San Felipe II", "San Ciprián", "Santa Clara", "Hugo"],
