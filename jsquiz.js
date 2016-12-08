@@ -5,7 +5,7 @@
     correctAnswer: 1
   }, {
     question: "¿Cual es el nombre para el medico de los taínos?",
-    choices: ["Cacique", "Cajaya", "Bojike", "Bohio", "Bohiti"],
+    choices: ["Cacique", "Cajaya", "Bohike", "Bohio", "Boti"],
     correctAnswer: 3
   }, {
     question: "¿Cual huracán tuvo mas muertes?",
