@@ -6,7 +6,7 @@
   }, {
     question: "¿Cual es el nombre para el medico de los taínos?",
     choices: ["Cacique", "Cajaya", "Bojike", "Bohio", "Bohiti"],
-    correctAnswer: 2
+    correctAnswer: 3
   }, {
     question: "¿Cual huracán tuvo mas muertes?",
     choices: ["George", "San Felipe II", "San Ciprián", "Santa Clara", "Hugo"],
@@ -45,7 +45,7 @@
     correctAnswer: 2
   }, {
     question: "¿Cual es el significado de la palabra taína 'Areito'?",
-    choices: ["Cangrejo Escuridiso", "Ritual para curar enfermedades", "Otra fiesta taína", "Sortija hecha de flores", "Baile de Los Taínos"],
+    choices: ["Cangrejo Escuridiso", "Ritual para curar enfermedades", "Bote Taíno", "Sortija hecha de flores", "Baile de Los Taínos"],
     correctAnswer: 4
   }, {
     question: "¿Quien de la tribu taína vivia en un 'Caney' y se sentaba en un 'Dujo'?",
