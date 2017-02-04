@@ -7,8 +7,8 @@ The base code was taken form https://codepen.io/gcarino/pen/LDgtn and the follow
 - You cannot go to the next question until you get it correct
 - Multiple Choices get greyed out if you get them incorrect and cannot submit the same answer again
 - The div container shakes when you get the answer wrong and deducts -1 from the total points
-- Changed the scoring system from how many you got right to +1 for each correct one to -1 for each incorrect answer
-- Edited the CSS to add a Puerto Rico theme and change the color/font schemes
+- Changed the scoring system from how many you got correct to +1 for each correct answer and -1 for each incorrect
+- Edited the CSS to add a Puerto Rico theme and a more modern color/font scheme
 - Added an alert for mobile users to use their device in landscape mode for a better view of the website
 
 Link below to access a live version of the website:
