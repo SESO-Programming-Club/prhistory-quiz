@@ -1,5 +1,5 @@
 # README
-A quiz website made by Adrian Rivera (@arbalasquide) for Puerto Rico History class
+A quiz website made by Adrian Rivera (@arBalasquide) for Puerto Rico History class
 
 The base code was taken form https://codepen.io/gcarino/pen/LDgtn and the following was modified and/or added:
 
